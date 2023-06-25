@@ -1,7 +1,55 @@
-# robotic_arm
+# Modeling a robotic arm
 This assignment is divided into three parts: creating an urdf, integrating the urdf into MoveIt and creating a service to drive the arm.
 
-## Duo: Hemant Ramphul & Lav Singh Ramessur
+#### Authors
+
+- [Hemant Ramphul](https://www.github.com/octokatherine)
+- [Lav Singh Ramessur](https://github.com/Lav-Singh/)
+
+
+
+## Introduction 
+1. In the first part it is a question of setting up the __*urdf*__ of an existing robot, of to be able to visualize it on __*Rviz*__ and move the joints.
+2. In the second part, having an *urdf of the robot* it will be necessary to integrate it on __*Moveit*__ in order to be able to control the trajectory of the robot.
+3. In the last part it is a question of __*creating two services*__, one for the kinematics *direct* and the other for *indirect* kinematics.
+
+#### Part 1. Creation of the urdf
+Creating a workspace for catkin
+```
+$ mkdir -p ~/catkin_ws/src
+```
+Build catkin workspace:
+```
+$ cd ~/catkin_ws/
+$ catkin_make
+```
+Init the environment:
+```
+$ source devel/setup.sh
+```
+Create a new package called **'ri_arm_description'**
+```
+$ catkin_create_pkg ri_arm_description rospy roscpp urdf std_msgs geometry_msgs sensor_msgs
+```
+Building acatkin workspace and sourcing the setup file
+```
+$ catkin_make
+```
+Create a URDF file named **"robot.urdf"**
+```
+$ mkdir -p urdf/robot.urdf
+```
+Set permisson **777** to file
+```
+$ chmod x+ *
+```
+Control with **Rviz**
+```
+$ roslaunch ri_arm_config demo.launch rviz_tutorial:=true
+```
+
+#### Part 2. MoveIt
+
 
 
 #### Plugins and others
@@ -10,6 +58,7 @@ This assignment is divided into three parts: creating an urdf, integrating the u
 | ----------------- | ------------------------------------------------------------------ |
 | ROS Noetic | https://wiki.ros.org/noetic |
 | MoveIt | https://moveit.ros.org/ |
+| Gazebo | https://gazebosim.org/home |
 
 ## 🚀 About Me
 <h1>
