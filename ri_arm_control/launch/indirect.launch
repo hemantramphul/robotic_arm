@@ -1,0 +1,6 @@
+<launch>
+<node name="arm_controller" pkg="ri_arm_control" type="indirect_kin_service.py">
+	<param name="group_name" value="ri_arm"/>
+</node>
+
+</launch>

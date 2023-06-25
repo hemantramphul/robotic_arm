@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<robot name="index">
+	<material name="orange">
+		<color rgba="1 0.5 0 1" />
+	</material>
+	<material name="gold">
+		<color rgba="1 0.7 0 1" />
+	</material>
+	<material name="coral">
+		<color rgba="1 0.5 0.2 1" />
+	</material>
+	<link name="base_link">
+		<visual>
+			<geometry>
+				<cylinder length="0.350" radius="0.05" />
+			</geometry>
+			<material name="gold" />
+		</visual>
+	</link>
+	<link name="first_joint">
+		<visual>
+			<geometry>
+				<box size="0.06 0.125 0.125" />
+			</geometry>
+			<material name="coral" />
+		</visual>
+	</link>
+	<joint name="base_to_first" type="revolute">
+		<parent link="base_link" />
+		<child link="first_joint" />
+		<origin rpy="0 0 0" xyz="0 0 0.125" />
+		<axis xyz="0 0 1" />
+		<limit lower="-3.1116" upper="3.1416" effort="100" velocity="1" />
+	</joint>
+	<link name="second_joint">
+		<visual>
+			<geometry>
+				<cylinder length="0.222" radius="0.05" />
+			</geometry>
+			<material name="orange" />
+		</visual>
+	</link>
+	<link name="second_joint_pivot">
+		<visual>
+			<geometry>
+				<sphere radius="0.05" />
+			</geometry>
+			<material name="orange" />
+		</visual>
+	</link>
+	<joint name="first_to_second_pivot" type="revolute">
+		<parent link="first_joint" />
+		<child link="second_joint_pivot" />
+		<origin rpy="0 0 0" xyz="-0.01 0.05 0.05" />
+		<axis xyz="1 0 0" />
+		<limit lower="-3.1116" upper="3.1416" effort="100" velocity="1" />
+	</joint>
+	<joint name="second_pivot_to_second" type="fixed">
+		<parent link="second_joint_pivot" />
+		<child link="second_joint" />
+		<origin rpy="0 0 0" xyz="0 0 0.111" />
+	</joint>
+	<link name="third_joint">
+		<visual>
+			<geometry>
+				<cylinder length="0.222" radius="0.05" />
+			</geometry>
+			<material name="orange" />
+		</visual>
+	</link>
+	<link name="third_joint_pivot">
+		<visual>
+			<geometry>
+				<sphere radius="0.05" />
+			</geometry>
+			<material name="orange" />
+		</visual>
+	</link>
+	<joint name="second_to_third_pivot" type="revolute">
+		<parent link="second_joint" />
+		<child link="third_joint_pivot" />
+		<origin rpy="0 0 0" xyz="-0.01 0 0.111" />
+		<axis xyz="1 0 0" />
+		<limit lower="-3.1116" upper="3.1416" effort="100" velocity="1" />
+	</joint>
+	<joint name="third_pivot_to_second" type="fixed">
+		<parent link="third_joint_pivot" />
+		<child link="third_joint" />
+		<origin rpy="0 0 0" xyz="0 0 0.111" />
+	</joint>
+	<link name="effector">
+		<visual>
+			<geometry>
+				<cylinder length="0.135" radius="0.025" />
+			</geometry>
+			<material name="orange" />
+		</visual>
+	</link>
+	<link name="effector_pivot">
+		<visual>
+			<geometry>
+				<sphere radius="0.05" />
+			</geometry>
+			<material name="orange" />
+		</visual>
+	</link>
+	<joint name="third_to_effector_pivot" type="revolute">
+		<parent link="third_joint" />
+		<child link="effector_pivot" />
+		<origin rpy="0 0 0" xyz="-0.01 0 0.111" />
+		<axis xyz="1 0 0" />
+		<limit lower="-3.1116" upper="3.1416" effort="100" velocity="1" />
+	</joint>
+	<joint name="effector_pivot_to_effector" type="fixed">
+		<parent link="effector_pivot" />
+		<child link="effector" />
+		<origin rpy="0 0 0" xyz="0 0 0.1" />
+	</joint>
+</robot>

@@ -1,0 +1,11 @@
+controller_list:
+  - name: fake_ri_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - base_to_first
+      - first_to_second_pivot
+      - second_to_third_pivot
+      - third_to_effector_pivot
+initial:  # Define initial robot poses per group
+  - group: ri_arm
+    pose: START
