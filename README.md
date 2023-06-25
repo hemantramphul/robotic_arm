@@ -48,7 +48,14 @@ Control with **Rviz**
 $ roslaunch ri_arm_config demo.launch rviz_tutorial:=true
 ```
 
-#### Part 2. MoveIt
+#### Part 2. Integration of urdf in MoveIt
+Start the robotic arm in **MoveIt** using command.
+```
+$ roslaunch moveit_setup_assistant setup_assistant.launch
+```
+after that a start screen will bring up like This
+![Start Screen](contents/MoveIt_setup_assistant_launch.png)
+
 
 
 
