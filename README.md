@@ -56,6 +56,8 @@ $ roslaunch moveit_setup_assistant setup_assistant.launch
 after that a start screen will bring up like This
 ![Start Screen](contents/MoveIt_setup_assistant_launch.png)
 
+Create New MoveIt Configuration Package: (Click on the browse button and navigate to the **"robot.urdf"** file)
+
 
 
 
