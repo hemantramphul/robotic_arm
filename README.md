@@ -59,7 +59,7 @@ after that a start screen will bring up like This
 Create New MoveIt Configuration Package: (Click on the browse button and navigate to the **"robot.urdf"** file)
 
 [![Demo](contents/demo2.mp4)
-
+<video src='contents/demo2.mp4' width=180/>
 
 
 #### Plugins and others
