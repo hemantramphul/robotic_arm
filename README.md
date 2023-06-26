@@ -43,7 +43,7 @@ Set permisson **777** to file
 ```
 $ chmod +x *
 ```
-Control with **Rviz**
+To view on **RVIZ**, run the following command: 
 ```
 $ roslaunch ri_arm_description display.launch model:=robot.urdf
 ```
