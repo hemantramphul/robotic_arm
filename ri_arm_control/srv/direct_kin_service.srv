@@ -1,7 +1,6 @@
-std_msgs/Float32 joint1
-std_msgs/Float32 joint2
-std_msgs/Float32 joint3
-std_msgs/Float32 joint4
+std_msgs/Float32 first_to_second_pivot
+std_msgs/Float32 second_pivot_to_second
+std_msgs/Float32 third_pivot_to_second
 ---
 std_msgs/Bool res
 std_msgs/String message
