@@ -45,7 +45,7 @@ $ chmod +x *
 ```
 Control with **Rviz**
 ```
-$ roslaunch ri_arm_config demo.launch rviz_tutorial:=true
+$ roslaunch ri_arm_description display.launch model:=robot.urdf
 ```
 
 #### Part 2. Integration of urdf in MoveIt
