@@ -18,7 +18,7 @@ class groupService:
 
 	def __init__(self):
 		rospy.init_node('arm_service_server')
-		self.group_name = rospy.get_param('~group_name',"ri_arm")
+		self.group_name = rospy.get_param('ri_arm',"first_to_second_pivot")
 		print(self.group_name)
 		moveit_commander.roscpp_initialize(sys.argv)
 

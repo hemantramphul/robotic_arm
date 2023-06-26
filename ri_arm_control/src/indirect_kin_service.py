@@ -19,7 +19,7 @@ class groupService:
 	def __init__(self):
 		moveit_commander.roscpp_initialize(sys.argv)
 		rospy.init_node('indirect_kin_arm_service_server', anonymous=True)
-		self.group_name = rospy.get_param('~group_name', "ri_arm")
+		self.group_name = rospy.get_param('ri_arm', "POSE")
 		self.robot=moveit_commander.RobotCommander()
 		self.scene =moveit_commander.PlanningSceneInterface()
 		self.move_group =moveit_commander.MoveGroupCommander(self.group_name)
