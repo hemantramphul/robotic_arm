@@ -1,5 +1,11 @@
 <launch>
-<node name="arm_controller" pkg="ri_arm_control" type="direct_kin_service.py">
-	<param name="group_name" value="ri_arm"/>
-</node>
+	<node name="first_arm_controller" pkg="ri_arm_control" type="direct_kin_service.py">
+		<param name="ri_arm" value="first_to_second_pivot" />
+	</node>
+	<node name="second_arm_controller" pkg="ri_arm_control" type="direct_kin_service.py">
+		<param name="ri_arm" value="second_pivot_to_second" />
+	</node>
+	<node name="third_arm_controller" pkg="ri_arm_control" type="direct_kin_service.py">
+		<param name="ri_arm" value="third_pivot_to_second" />
+	</node>
 </launch>
