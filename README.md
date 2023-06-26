@@ -127,9 +127,9 @@ $ roslaunch ri_arm_control indirect.launch
 | Gazebo | https://gazebosim.org/home |
 
 ## 🚀 About Me
-<h1>
+<h3>
   Hi there 👋 I'm Hemant 👨‍💻
-</h1>
+</h3>
 
 <p>
   A full stack developer from Mauritius. 
