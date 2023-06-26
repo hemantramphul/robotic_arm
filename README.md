@@ -72,6 +72,7 @@ And finally create your package **"ri_arm_config"**
 _Demo via RViz to play plainning group_
 ![Demo](https://github.com/hemantramphul/robotic_arm/assets/7212627/02d44ac3-0c2e-4c6d-8b6e-4561f5fe0eba)
 
+#### Part 2. Creation of control services
 
 #### Plugins and others
 
