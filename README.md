@@ -58,6 +58,18 @@ after that a start screen will bring up like This
 
 Create New MoveIt Configuration Package: (Click on the browse button and navigate to the **"robot.urdf"** file)
 
+Add Planning Groups
+Create a group named **"ri_arm"**
+![Create Group](contents/group.png)
+
+
+Create a pose named **"Pose"** to reset initial position of your robot arm.
+![Create Pose](contents/create_pose.png)
+
+And finally create your package **"ri_arm_config"**
+![Create Package](contents/create_pkg.png)
+
+_Demo via RViz to play plainning group_
 ![Demo](https://github.com/hemantramphul/robotic_arm/assets/7212627/02d44ac3-0c2e-4c6d-8b6e-4561f5fe0eba)
 
 
