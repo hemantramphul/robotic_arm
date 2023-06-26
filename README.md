@@ -13,44 +13,44 @@ This assignment is divided into three parts: creating an urdf, integrating the u
 2. In the second part, having an *urdf of the robot* it will be necessary to integrate it on __*Moveit*__ in order to be able to control the trajectory of the robot.
 3. In the last part it is a question of __*creating two services*__, one for the kinematics *direct* and the other for *indirect* kinematics.
 
-#### Part 1. Creation of the urdf
+### Part 1. Creation of the urdf
 Creating a workspace for catkin
-```
+```bash
 $ mkdir -p ~/catkin_ws/src
 ```
 Build catkin workspace:
-```
+```bash
 $ cd ~/catkin_ws/
 $ catkin_make
 ```
 Init the environment:
-```
+```bash
 $ source devel/setup.sh
 ```
 Create a new package called **'ri_arm_description'**
-```
+```bash
 $ catkin_create_pkg ri_arm_description rospy roscpp urdf std_msgs geometry_msgs sensor_msgs
 ```
 Building acatkin workspace and sourcing the setup file
-```
+```bash
 $ catkin_make
 ```
 Create a URDF file named **"robot.urdf"**
-```
+```bash
 $ mkdir -p urdf/robot.urdf
 ```
 Set permisson **777** to file
-```
+```bash
 $ chmod +x *
 ```
 To view on **RVIZ**, run the following command: 
-```
+```bash
 $ roslaunch ri_arm_description display.launch model:=robot.urdf
 ```
 
-#### Part 2. Integration of urdf in MoveIt
+### Part 2. Integration of urdf in MoveIt
 Start the robotic arm in **MoveIt** using command.
-```
+```bash
 $ roslaunch moveit_setup_assistant setup_assistant.launch
 ```
 after that a start screen will bring up like This
@@ -74,7 +74,7 @@ And finally create your package **"ri_arm_config"**
 _Demo via RViz to play plainning group_
 ![Demo](https://github.com/hemantramphul/robotic_arm/assets/7212627/02d44ac3-0c2e-4c6d-8b6e-4561f5fe0eba)
 
-#### Part 2. Creation of control services
+### Part 3. Creation of control services
 Create a package "ri_arm_control".
 
 Create a "launch" folder
@@ -106,6 +106,15 @@ Config to reset **"indirect.launch"**
 		<param name="ri_arm" value="POSE" />
 	</node>
 </launch>
+```
+
+Launch direct kinematics
+```sh
+roslaunch ri_arm_control direct.launch
+
+OR
+
+roslaunch ri_arm_control indirect.launch
 ```
 
 
