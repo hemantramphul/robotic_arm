@@ -3,8 +3,8 @@ This assignment is divided into three parts: creating an urdf, integrating the u
 
 #### Authors
 
-- [Hemant Ramphul](https://www.github.com/hemantramphul)
-- [Lav Singh Ramessur](https://github.com/Lav-Singh/)
+- [Hemant Ramphul](https://www.github.com/hemantramphul/)
+- [Lav Singh Ramessur](https://www.github.com/Lav-Singh/)
 
 
 
