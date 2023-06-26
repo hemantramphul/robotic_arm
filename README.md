@@ -62,6 +62,8 @@ Add Planning Groups
 Create a group named **"ri_arm"**
 ![Create Group](contents/group.png)
 
+Select all joints collections
+![Groups selections](contents/groups.png)
 
 Create a pose named **"Pose"** to reset initial position of your robot arm.
 ![Create Pose](contents/create_pose.png)
