@@ -109,14 +109,14 @@ Config to reset **"indirect.launch"**
 ```
 
 Launch direct kinematics
-```sh
-roslaunch ri_arm_control direct.launch
-
-OR
-
-roslaunch ri_arm_control indirect.launch
+```bash
+$ roslaunch ri_arm_control direct.launch
 ```
 
+Launch indirect kinematics
+```bash
+$ roslaunch ri_arm_control indirect.launch
+```
 
 #### Plugins and others
 
