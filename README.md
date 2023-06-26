@@ -58,8 +58,7 @@ after that a start screen will bring up like This
 
 Create New MoveIt Configuration Package: (Click on the browse button and navigate to the **"robot.urdf"** file)
 
-[![Demo](contents/demo2.mp4)
-<video src='contents/demo2.mp4' width=180/>
+![Demo](https://github.com/hemantramphul/robotic_arm/assets/7212627/02d44ac3-0c2e-4c6d-8b6e-4561f5fe0eba)
 
 
 #### Plugins and others
