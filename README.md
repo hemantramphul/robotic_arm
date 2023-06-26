@@ -41,7 +41,7 @@ $ mkdir -p urdf/robot.urdf
 ```
 Set permisson **777** to file
 ```
-$ chmod x+ *
+$ chmod +x *
 ```
 Control with **Rviz**
 ```
