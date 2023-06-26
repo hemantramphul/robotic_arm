@@ -75,6 +75,39 @@ _Demo via RViz to play plainning group_
 ![Demo](https://github.com/hemantramphul/robotic_arm/assets/7212627/02d44ac3-0c2e-4c6d-8b6e-4561f5fe0eba)
 
 #### Part 2. Creation of control services
+Create a package "ri_arm_control".
+
+Create a "launch" folder
+```bash
+$ mkdir launch
+```
+
+Create two files namely **"direct.launch"** and indirect **"indirect.launch"**
+
+Config all nodes for **"direct.launch"**
+```xml
+<launch>
+	<node name="first_arm_controller" pkg="ri_arm_control" type="direct_kin_service.py">
+		<param name="ri_arm" value="first_to_second_pivot" />
+	</node>
+	<node name="second_arm_controller" pkg="ri_arm_control" type="direct_kin_service.py">
+		<param name="ri_arm" value="second_pivot_to_second" />
+	</node>
+	<node name="third_arm_controller" pkg="ri_arm_control" type="direct_kin_service.py">
+		<param name="ri_arm" value="third_pivot_to_second" />
+	</node>
+</launch>
+```
+
+Config to reset **"indirect.launch"**
+```xml
+<launch>
+	<node name="arm_controller" pkg="ri_arm_control" type="indirect_kin_service.py">
+		<param name="ri_arm" value="POSE" />
+	</node>
+</launch>
+```
+
 
 #### Plugins and others
 
